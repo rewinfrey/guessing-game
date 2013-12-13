@@ -1,0 +1,10 @@
+(doctype :html5)
+[:html
+ [:head
+  [:meta {:http-equiv "Content-Type" :content "text/html" :charset "iso-8859-1"}]
+  [:title "guessing_game"]
+  (include-css (add-fingerprint "/stylesheets/guessing_game.css"))
+  (include-js (add-fingerprint (format "/javascript/guessing_game%s.js" (if (env/development?) "_dev" ""))))]
+ [:body
+  (eval (:template-body joodo.views/*view-context*))
+]]
