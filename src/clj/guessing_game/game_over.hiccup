@@ -1,0 +1,6 @@
+[:h1 {} (:message *view-context*)]
+[:img {:src (:image *view-context*)}]
+[:p.actual-number {} "Secret number was " (:secret-number *view-context*)]
+[:div.play-again
+ [:a.button {:href "/"} "Play Again"]
+]

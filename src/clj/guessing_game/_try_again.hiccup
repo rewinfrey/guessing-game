@@ -1,0 +1,2 @@
+[:h1 {} (:result *view-context*)]
+[:img {:src (:image *view-context*)}]

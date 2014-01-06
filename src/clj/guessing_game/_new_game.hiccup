@@ -1,0 +1,2 @@
+[:h1 "Guess A Number!"]
+[:img {:src "images/guessing_cat.gif"}]

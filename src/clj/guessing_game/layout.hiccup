@@ -1,10 +1,13 @@
 (doctype :html5)
 [:html
  [:head
-  [:meta {:http-equiv "Content-Type" :content "text/html" :charset "iso-8859-1"}]
+  [:meta {:name "viewport" :http-equiv "Content-Type" :content "text/html, width=device-width" :charset "iso-8859-1"}]
   [:title "guessing_game"]
   (include-css (add-fingerprint "/stylesheets/guessing_game.css"))
   (include-js (add-fingerprint (format "/javascript/guessing_game%s.js" (if (env/development?) "_dev" ""))))]
+ [:link {:href "http://fonts.googleapis.com/css?family=Open+Sans" :rel "stylesheet" :type "text/css"}]
  [:body
+  [:div.container
   (eval (:template-body joodo.views/*view-context*))
+  ]
 ]]

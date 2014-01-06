@@ -1,0 +1,9 @@
+(if (:result *view-context*)
+  (render-partial "try_again")
+  (render-partial "new_game"))
+(render-partial "guess_form")
+[:div.attempts-remaining-container
+ [:div.attempts-remaining
+  [:span {} (:attempts-remaining *view-context*)]
+ ]
+]
